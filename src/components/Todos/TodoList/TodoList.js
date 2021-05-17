@@ -3,7 +3,7 @@ import React from 'react';
 import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.css';
 
-const TodoList = props => {
+function TodoList(props) {
   return (
     <ul className="todo-list">
       {props.items.map(todo => (

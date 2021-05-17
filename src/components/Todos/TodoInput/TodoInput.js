@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import Button from '../../UI/Button/Button';
 import './TodoInput.css';
 
-const TodoInput = props => {
+function TodoInput(props) {
+
   const [enteredValue, setEnteredValue] = useState('');
 
   const todoInputChangeHandler = event => {
@@ -12,6 +13,9 @@ const TodoInput = props => {
 
   const formSubmitHandler = event => {
     event.preventDefault();
+    if (enteredValue.trim().length === 0) {
+      return;
+    }
     props.onAddTodo(enteredValue);
   };
 

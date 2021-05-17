@@ -4,7 +4,7 @@ import TodoList from './components/Todos/TodoList/TodoList';
 import TodoInput from './components/Todos/TodoInput/TodoInput';
 import './App.css';
 
-const App = () => {
+function App() {
 
   const [todos, setTodos] = useState([
     { text: 'Do homework!', id: 'g1' },

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './TodoItem.css';
 
-const TodoItem = props => {
+function TodoItem(props) {
   // const [deleteText, setDeleteText] = useState('');
 
   const deleteHandler = () => {
