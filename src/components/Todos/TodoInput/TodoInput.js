@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Button from '../../UI/Button/Button';
 
-import './TodoInput.css';
+import styles from './TodoInput.module.css';
 
 function TodoInput(props) {
 
@@ -28,7 +28,7 @@ function TodoInput(props) {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className={`form-control ${!isValid ? 'invalid' : ''}`}>
+      <div className={`${styles['form-control']} ${!isValid && styles.invalid}`}>
         <label>To-do</label>
         <input type="text" onChange={todoInputChangeHandler} />
       </div>
